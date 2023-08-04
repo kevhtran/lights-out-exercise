@@ -29,16 +29,7 @@ import "./Board.css";
 
 
 /** create a board nrows high/ncols wide, each cell randomly lit or unlit */
-// function createBoard() {
-//   let initialBoard = [];
-// TODO: create array-of-arrays of true/false values
-// for (let x = 0; x < nrows.length; x++) {
-//   let row = [];
-//   for (let y = 0; y < ncols.length; y++) {
-//     row.push(Math.random() < chanceLightStartsOn);
-//   }
-//   initialBoard.push(row)
-// }
+
 function Board({ nrows = 5, ncols = 5, chanceLightStartsOn = 0.25 }) {
   const [board, setBoard] = useState(createBoard());
 
@@ -115,29 +106,7 @@ function Board({ nrows = 5, ncols = 5, chanceLightStartsOn = 0.25 }) {
       <tbody>{tblBoard}</tbody>
     </table>
   );
-  //   for (let y = 0; y < nrows; y++) {
-  //     let row = [];
-  //     for (let x = 0; x < ncols; x++) {
-  //       let coord = `${y}-${x}`;
-  //       row.push(
-  //         <Cell
-  //           key={coord}
-  //           isLit={board[y][x]}
-  //           flipCellsAroundMe={() => flipCellsAround(coord)}
-  //         />
-  //       );
-  //     }
-  //     tblBoard.push(<tr key={y}>{row}</tr>);
-
-  //   }
-  //   console.log(tblBoard);
-  //   return (
-  //     <table className="Board">
-  //       <tbody>{tblBoard}</tbody>
-  //     </table>
-  //   );
-
-  // }
+  
 
 }
 export default Board;
